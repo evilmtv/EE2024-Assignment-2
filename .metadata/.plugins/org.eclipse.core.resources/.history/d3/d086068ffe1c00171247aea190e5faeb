@@ -44,7 +44,6 @@ void rgb_init (void)
     GPIO_SetDir( 2, (1<<0), 1 );
     GPIO_SetDir( 0, (1<<26), 1 );
     GPIO_SetDir( 2, (1<<1), 1 );
-    GPIO_SetValue( 2, (1<<1) ); //Leave green on to enable OLED
 
 }
 
@@ -72,10 +71,10 @@ void rgb_setLeds (uint8_t ledMask)
         GPIO_ClearValue( 0, (1<<26) );
     }
 
-//    if (ledMask == RGB_GREEN) {
-//        GPIO_SetValue( 2, (1<<1) );
-//    } else {
-//        GPIO_ClearValue( 2, (1<<1) );
-//    }
+    if (ledMask == RGB_GREEN) {
+        GPIO_SetValue( 2, (1<<1) );
+    } else {
+        GPIO_ClearValue( 2, (1<<1) );
+    }
 
 }

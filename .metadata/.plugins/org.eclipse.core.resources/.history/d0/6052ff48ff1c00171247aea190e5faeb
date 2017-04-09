@@ -24,9 +24,6 @@ static uint8_t barPos = 2;
 
 static char* msg = NULL;
 
-int firedetected = 0;
-int movingindark = 0;
-
 volatile uint32_t msTicks; // counter for 1ms SysTicks
 
 // ****************
@@ -66,45 +63,45 @@ static void moveBar(uint8_t steps, uint8_t dir) {
 	pca9532_setLeds(ledOn, 0xffff);
 }
 
-//static void drawOled(uint8_t joyState) {
-//	static int wait = 0;
-//	static uint8_t currX = 48;
-//	static uint8_t currY = 32;
-//	static uint8_t lastX = 0;
-//	static uint8_t lastY = 0;
-//
-//	if ((joyState & JOYSTICK_CENTER) != 0) {
-//		oled_clearScreen(OLED_COLOR_BLACK);
-//		return;
-//	}
-//
-//	if (wait++ < 3)
-//		return;
-//
-//	wait = 0;
-//
-//	if ((joyState & JOYSTICK_UP) != 0 && currY > 0) {
-//		currY--;
-//	}
-//
-//	if ((joyState & JOYSTICK_DOWN) != 0 && currY < OLED_DISPLAY_HEIGHT - 1) {
-//		currY++;
-//	}
-//
-//	if ((joyState & JOYSTICK_RIGHT) != 0 && currX < OLED_DISPLAY_WIDTH - 1) {
-//		currX++;
-//	}
-//
-//	if ((joyState & JOYSTICK_LEFT) != 0 && currX > 0) {
-//		currX--;
-//	}
-//
-//	if (lastX != currX || lastY != currY) {
-//		oled_putPixel(currX, currY, OLED_COLOR_WHITE);
-//		lastX = currX;
-//		lastY = currY;
-//	}
-//}
+static void drawOled(uint8_t joyState) {
+	static int wait = 0;
+	static uint8_t currX = 48;
+	static uint8_t currY = 32;
+	static uint8_t lastX = 0;
+	static uint8_t lastY = 0;
+
+	if ((joyState & JOYSTICK_CENTER) != 0) {
+		oled_clearScreen(OLED_COLOR_BLACK);
+		return;
+	}
+
+	if (wait++ < 3)
+		return;
+
+	wait = 0;
+
+	if ((joyState & JOYSTICK_UP) != 0 && currY > 0) {
+		currY--;
+	}
+
+	if ((joyState & JOYSTICK_DOWN) != 0 && currY < OLED_DISPLAY_HEIGHT - 1) {
+		currY++;
+	}
+
+	if ((joyState & JOYSTICK_RIGHT) != 0 && currX < OLED_DISPLAY_WIDTH - 1) {
+		currX++;
+	}
+
+	if ((joyState & JOYSTICK_LEFT) != 0 && currX > 0) {
+		currX--;
+	}
+
+	if (lastX != currX || lastY != currY) {
+		oled_putPixel(currX, currY, OLED_COLOR_WHITE);
+		lastX = currX;
+		lastY = currY;
+	}
+}
 
 #define NOTE_PIN_HIGH() GPIO_SetValue(0, 1<<26);
 #define NOTE_PIN_LOW()  GPIO_ClearValue(0, 1<<26);
@@ -314,9 +311,9 @@ int main(void) {
 	int print_at_f_counter2 = 0;
 	int print_at_f_counter3 = 0;
 	int movement = 0;
+	int firedetected = 0;
+	int movingindark = 0;
 
-
-	uint32_t previousTime;
 	uint8_t data = 0;
 	uint32_t len = 0;
 	uint8_t line[64];
@@ -342,6 +339,7 @@ int main(void) {
 	uint8_t state = 0;
 
 	uint8_t btn1 = 1;
+	//uint8_t btnSW4 = 1;
 
 	init_i2c();
 	light_init();
@@ -392,15 +390,8 @@ int main(void) {
 
 	GPIO_SetDir(1, 1 << 31, 0); //SW4
 
-
-	/* <---- Initialize ------ */
-	monitor_state = 0;
-	rgb_setLeds(0);
-	led7seg_setChar(32, FALSE);
-	oled_clearScreen(OLED_COLOR_BLACK);
-
 	while (1) {
-		/* <---- State Manager ------ */
+		//btnSW4 = (GPIO_ReadValue(1) >> 31) & 0x01;
 		if (((GPIO_ReadValue(1) >> 31) & 0x01) == 0 && monitor_state == 0) {
 			//test sending message
 			msg = "Entering MONITOR Mode.\r\n";
@@ -422,16 +413,10 @@ int main(void) {
 			systick_delay(1500);
 		}
 
-		/* <---- Monitor Mode ------ */
 		if (monitor_state == 1) {
 
-			// Run once every second
-			while ((msTicks - previousTime) <= 1000)
-				;
-			previousTime = msTicks;	// read current tick counter
-
-			/* <---- Onboard timer shown on led7seg ------ */
 			led7seg_setChar(current_tick, FALSE);
+			systick_delay(50); // wait 1 seconds (1000ms)
 			current_tick++;
 			if (current_tick == 58) {
 				current_tick = 65;
@@ -439,16 +424,17 @@ int main(void) {
 				current_tick = 48;
 			}
 
-			/* <---- Update sensors values ------ */
-			// Read sensors (light, temp, acc)
 			int lightval = light_read() + 48;
 			int tempval = temp_read();
+
+			/* ####### Accelerometer and LEDs  ###### */
+			/* # */
+
 			acc_read(&x, &y, &z);
-			// Adjust x y z readings
 			x = x + xoff;
 			y = y + yoff;
 			z = z + zoff;
-			// Check for movement based on previous acc values
+
 			if (((abs(x - xold)) > 10) || ((abs(y - yold)) > 10)
 					|| ((abs(z - zold)) > 10)) {
 				movement = 1;
@@ -459,8 +445,6 @@ int main(void) {
 			yold = y;
 			zold = z;
 
-			/* <---- LIGHT_LOW_WARNING & TEMP_HIGH_WARNING ------ */
-			// Check for user moving in dark places
 			if (movement == 1 && lightval < 700) {
 				movingindark = 1;
 				/*BLINK BLUE
@@ -473,7 +457,7 @@ int main(void) {
 			} else {
 				movingindark = 0;
 			}
-			// Check if temp exceeds permissible limits
+
 			if (tempval > 450) {
 				firedetected = 1;
 				//BLINK RED
@@ -493,7 +477,9 @@ int main(void) {
 				wait = 0;
 			}
 
-			/* <---- Update values on OLED ------ */
+			/* # */
+			/* ############################################# */
+
 			if (current_tick == 53 || current_tick == 65
 					|| current_tick == 70) {
 				char strLight[25], strTemp[25], strAcc[25];
@@ -545,9 +531,10 @@ int main(void) {
 			/* ####### Joystick and OLED  ###### */
 			/* # */
 
-//			state = joystick_read();
-//			if (state != 0)
-//				drawOled(state);
+			state = joystick_read();
+			if (state != 0)
+				drawOled(state);
+
 			/* # */
 			/* ############################################# */
 

@@ -24,9 +24,6 @@ static uint8_t barPos = 2;
 
 static char* msg = NULL;
 
-int firedetected = 0;
-int movingindark = 0;
-
 volatile uint32_t msTicks; // counter for 1ms SysTicks
 
 // ****************
@@ -314,7 +311,8 @@ int main(void) {
 	int print_at_f_counter2 = 0;
 	int print_at_f_counter3 = 0;
 	int movement = 0;
-
+	int firedetected = 0;
+	int movingindark = 0;
 
 	uint32_t previousTime;
 	uint8_t data = 0;
@@ -429,8 +427,6 @@ int main(void) {
 			while ((msTicks - previousTime) <= 1000)
 				;
 			previousTime = msTicks;	// read current tick counter
-
-			/* <---- Onboard timer shown on led7seg ------ */
 			led7seg_setChar(current_tick, FALSE);
 			current_tick++;
 			if (current_tick == 58) {
@@ -439,16 +435,17 @@ int main(void) {
 				current_tick = 48;
 			}
 
-			/* <---- Update sensors values ------ */
-			// Read sensors (light, temp, acc)
 			int lightval = light_read() + 48;
 			int tempval = temp_read();
+
+			/* ####### Accelerometer and LEDs  ###### */
+			/* # */
+
 			acc_read(&x, &y, &z);
-			// Adjust x y z readings
 			x = x + xoff;
 			y = y + yoff;
 			z = z + zoff;
-			// Check for movement based on previous acc values
+
 			if (((abs(x - xold)) > 10) || ((abs(y - yold)) > 10)
 					|| ((abs(z - zold)) > 10)) {
 				movement = 1;
@@ -459,8 +456,6 @@ int main(void) {
 			yold = y;
 			zold = z;
 
-			/* <---- LIGHT_LOW_WARNING & TEMP_HIGH_WARNING ------ */
-			// Check for user moving in dark places
 			if (movement == 1 && lightval < 700) {
 				movingindark = 1;
 				/*BLINK BLUE
@@ -473,7 +468,7 @@ int main(void) {
 			} else {
 				movingindark = 0;
 			}
-			// Check if temp exceeds permissible limits
+
 			if (tempval > 450) {
 				firedetected = 1;
 				//BLINK RED
@@ -493,7 +488,9 @@ int main(void) {
 				wait = 0;
 			}
 
-			/* <---- Update values on OLED ------ */
+			/* # */
+			/* ############################################# */
+
 			if (current_tick == 53 || current_tick == 65
 					|| current_tick == 70) {
 				char strLight[25], strTemp[25], strAcc[25];
@@ -548,6 +545,7 @@ int main(void) {
 //			state = joystick_read();
 //			if (state != 0)
 //				drawOled(state);
+
 			/* # */
 			/* ############################################# */
 
