@@ -314,7 +314,7 @@ int main(void) {
 
 	int firedetected = 0;
 	int movingindark = 0;
-	int alertstatus = 0;
+	int alertstatus;
 
 	uint32_t previousTime;
 	uint8_t data = 0;
@@ -401,6 +401,7 @@ int main(void) {
 	while (1) {
 		/* <---- State Manager ------ */
 		if (((GPIO_ReadValue(1) >> 31) & 0x01) == 0 && monitor_state == 0) {
+			//test sending message
 			msg = "Entering MONITOR Mode.\r\n";
 			UART_Send(LPC_UART3, (uint8_t *) msg, strlen(msg), BLOCKING);
 			monitor_state = 1;
@@ -410,15 +411,13 @@ int main(void) {
 					OLED_COLOR_BLACK);
 		} else if (((GPIO_ReadValue(1) >> 31) & 0x01) == 0
 				&& monitor_state == 1) {
+			//test sending message
 			msg = "Entering Stable State.\r\n";
 			UART_Send(LPC_UART3, (uint8_t *) msg, strlen(msg), BLOCKING);
 			monitor_state = 0;
 			rgb_setLeds(0);
 			led7seg_setChar(32, FALSE);
 			oled_clearScreen(OLED_COLOR_BLACK);
-			firedetected = 0;
-			movingindark = 0;
-			alertstatus = 0;
 			systick_delay(1500);
 		}
 
@@ -460,8 +459,9 @@ int main(void) {
 			zold = z;
 
 			/* <---- LIGHT_LOW_WARNING & TEMP_HIGH_WARNING ------ */
+			alertstatus = 0;
 			// Check for user moving in dark places
-			if (movingindark == 0 && movement == 1 && lightval < 50) {
+			if (movement == 0 && lightval < 500) {
 				movingindark = 1;
 				if (firedetected == 1) {
 					alertstatus = 3;
@@ -470,7 +470,7 @@ int main(void) {
 				}
 			}
 			// Check if temp exceeds permissible limits
-			if (firedetected == 0 && tempval > 450) {
+			if (tempval > 1) {
 				firedetected = 1;
 				if (movingindark == 1) {
 					alertstatus = 3;
