@@ -460,15 +460,15 @@ int main(void) {
 			/* <---- LIGHT_LOW_WARNING & TEMP_HIGH_WARNING ------ */
 			// Check for user moving in dark places
 			if (movement == 1 && lightval < 700) {
-				movingindark = 0;
-			} else {
 				movingindark = 1;
+			} else {
+				movingindark = 0;
 			}
 			// Check if temp exceeds permissible limits
 			if (tempval > 450) {
-				firedetected = 0;
-			} else {
 				firedetected = 1;
+			} else {
+				firedetected = 0;
 			}
 			// Blink LED to alert user accordingly
 			rgb_setLeds(0); // Turn off LEDs

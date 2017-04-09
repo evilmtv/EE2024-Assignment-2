@@ -460,15 +460,15 @@ int main(void) {
 			/* <---- LIGHT_LOW_WARNING & TEMP_HIGH_WARNING ------ */
 			// Check for user moving in dark places
 			if (movement == 1 && lightval < 700) {
-				movingindark = 0;
-			} else {
 				movingindark = 1;
+			} else {
+				movingindark = 0;
 			}
 			// Check if temp exceeds permissible limits
 			if (tempval > 450) {
-				firedetected = 0;
-			} else {
 				firedetected = 1;
+			} else {
+				firedetected = 0;
 			}
 			// Blink LED to alert user accordingly
 			rgb_setLeds(0); // Turn off LEDs
@@ -484,6 +484,13 @@ int main(void) {
 				}
 				blink_count++;
 			}
+			/*BLINK BLUE
+			 * rgb_setLeds(2);
+			 systick_delay(100);
+			 rgb_setLeds(0);
+			 systick_delay(100);
+			 rgb_setLeds(2);
+			 systick_delay(100);*/
 
 //			if (y < 0) {
 //				dir = 1;
@@ -495,7 +502,7 @@ int main(void) {
 //			if (y > 1 && wait++ > (40 / (1 + (y / 10)))) {
 //				moveBar(1, dir);
 //				wait = 0;
-//		}
+		}
 
 		/* <---- Update values on OLED ------ */
 		if (current_tick == 53 || current_tick == 65 || current_tick == 70) {
