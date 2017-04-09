@@ -14,7 +14,8 @@ src/main.d: ../src/main.c \
  D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_EaBaseBoard\inc/acc.h \
  D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h \
  D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_EaBaseBoard\inc/rgb.h \
- D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_EaBaseBoard\inc/led7seg.h
+ D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_EaBaseBoard\inc/led7seg.h \
+ D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_EaBaseBoard\inc/light.h
 
 D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_MCU\inc/lpc17xx_pinsel.h:
 
@@ -47,3 +48,5 @@ D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:
 D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_EaBaseBoard\inc/rgb.h:
 
 D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_EaBaseBoard\inc/led7seg.h:
+
+D:\NUS\Year\ 2\ AY2016-2017\EE2024\Lib_EaBaseBoard\inc/light.h:
