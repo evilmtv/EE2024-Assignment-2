@@ -9661,3 +9661,1883 @@ arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
    text	   data	    bss	    dec	    hex	filename
   39756	   2324	    908	  42988	   a7ec	demo.axf
  
+18:59:12 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+18:59:12 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+18:59:13 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+18:59:14 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'EINT3_IRQHandler':
+../src/main.c:309:21: error: 'LPC_GPIOINT_TypeDef' has no member named 'IO1IntStatF'
+../src/main.c:310:20: error: 'LPC_GPIOINT_TypeDef' has no member named 'IO1IntClr'
+../src/main.c:311:13: error: 'monitor_state' undeclared (first use in this function)
+../src/main.c:311:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'main':
+../src/main.c:340:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:371:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c:409:16: error: 'LPC_GPIOINT_TypeDef' has no member named 'IO1IntEnF'
+../src/main.c:430:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:464:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:471:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:546:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:552:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:554:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:556:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:558:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:357:10: warning: unused variable 'btn1' [-Wunused-variable]
+../src/main.c:355:10: warning: unused variable 'state' [-Wunused-variable]
+../src/main.c:353:10: warning: unused variable 'wait' [-Wunused-variable]
+../src/main.c:335:10: warning: unused variable 'line' [-Wunused-variable]
+../src/main.c:334:11: warning: unused variable 'len' [-Wunused-variable]
+../src/main.c:333:10: warning: unused variable 'data' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:186:13: warning: 'playSong' defined but not used [-Wunused-function]
+../src/main.c:214:18: warning: 'song' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+19:00:19 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+19:00:19 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+19:00:20 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+19:00:21 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'EINT3_IRQHandler':
+../src/main.c:310:20: error: 'LPC_GPIOINT_TypeDef' has no member named 'IO1IntClr'
+../src/main.c:311:13: error: 'monitor_state' undeclared (first use in this function)
+../src/main.c:311:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'main':
+../src/main.c:340:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:371:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c:409:16: error: 'LPC_GPIOINT_TypeDef' has no member named 'IO1IntEnF'
+../src/main.c:430:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:464:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:471:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:546:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:552:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:554:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:556:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:558:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:357:10: warning: unused variable 'btn1' [-Wunused-variable]
+../src/main.c:355:10: warning: unused variable 'state' [-Wunused-variable]
+../src/main.c:353:10: warning: unused variable 'wait' [-Wunused-variable]
+../src/main.c:335:10: warning: unused variable 'line' [-Wunused-variable]
+../src/main.c:334:11: warning: unused variable 'len' [-Wunused-variable]
+../src/main.c:333:10: warning: unused variable 'data' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:186:13: warning: 'playSong' defined but not used [-Wunused-function]
+../src/main.c:214:18: warning: 'song' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+19:00:22 **** Incremental Build of configuration Debug for project demo_GPIO ****
+make all 
+make: Nothing to be done for `all'.
+19:00:23 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+make all 
+make: Nothing to be done for `all'.
+19:37:57 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+19:37:57 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+19:37:58 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+19:38:00 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'EINT3_IRQHandler':
+../src/main.c:309:21: error: 'LPC_GPIOINT_TypeDef' has no member named 'IO1IntStatF'
+../src/main.c:310:20: error: 'LPC_GPIOINT_TypeDef' has no member named 'IO1IntClr'
+../src/main.c:311:13: error: 'monitor_state' undeclared (first use in this function)
+../src/main.c:311:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'main':
+../src/main.c:340:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:371:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c:409:16: error: 'LPC_GPIOINT_TypeDef' has no member named 'IO1IntEnF'
+../src/main.c:430:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:464:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:471:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:546:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:552:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:554:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:556:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:558:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:357:10: warning: unused variable 'btn1' [-Wunused-variable]
+../src/main.c:355:10: warning: unused variable 'state' [-Wunused-variable]
+../src/main.c:353:10: warning: unused variable 'wait' [-Wunused-variable]
+../src/main.c:335:10: warning: unused variable 'line' [-Wunused-variable]
+../src/main.c:334:11: warning: unused variable 'len' [-Wunused-variable]
+../src/main.c:333:10: warning: unused variable 'data' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:186:13: warning: 'playSong' defined but not used [-Wunused-function]
+../src/main.c:214:18: warning: 'song' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+19:38:01 **** Incremental Build of configuration Debug for project demo_GPIO ****
+make all 
+make: Nothing to be done for `all'.
+19:38:03 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+make all 
+make: Nothing to be done for `all'.
+19:53:18 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+19:53:18 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+19:53:19 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+19:53:20 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:328:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:359:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c:412:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:447:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:454:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:529:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:535:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:537:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:539:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:345:10: warning: unused variable 'btn1' [-Wunused-variable]
+../src/main.c:343:10: warning: unused variable 'state' [-Wunused-variable]
+../src/main.c:341:10: warning: unused variable 'wait' [-Wunused-variable]
+../src/main.c:323:10: warning: unused variable 'line' [-Wunused-variable]
+../src/main.c:322:11: warning: unused variable 'len' [-Wunused-variable]
+../src/main.c:321:10: warning: unused variable 'data' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:186:13: warning: 'playSong' defined but not used [-Wunused-function]
+../src/main.c:214:18: warning: 'song' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39756	   2324	    908	  42988	   a7ec	demo.axf
+ 
+19:54:43 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+19:54:43 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+19:54:44 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+19:54:45 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:328:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:359:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c:412:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:447:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:454:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:529:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:535:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:537:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:539:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:345:10: warning: unused variable 'btn1' [-Wunused-variable]
+../src/main.c:343:10: warning: unused variable 'state' [-Wunused-variable]
+../src/main.c:341:10: warning: unused variable 'wait' [-Wunused-variable]
+../src/main.c:323:10: warning: unused variable 'line' [-Wunused-variable]
+../src/main.c:322:11: warning: unused variable 'len' [-Wunused-variable]
+../src/main.c:321:10: warning: unused variable 'data' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:186:13: warning: 'playSong' defined but not used [-Wunused-function]
+../src/main.c:214:18: warning: 'song' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39764	   2324	    908	  42996	   a7f4	demo.axf
+ 
+19:58:02 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+19:58:02 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+19:58:03 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+19:58:04 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_GPIO':
+../src/main.c:269:2: error: 'PinCfg' undeclared (first use in this function)
+../src/main.c:269:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'main':
+../src/main.c:322:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:353:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c:406:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:441:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:448:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:523:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:529:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:531:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:533:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:535:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:339:10: warning: unused variable 'btn1' [-Wunused-variable]
+../src/main.c:337:10: warning: unused variable 'state' [-Wunused-variable]
+../src/main.c:335:10: warning: unused variable 'wait' [-Wunused-variable]
+../src/main.c:317:10: warning: unused variable 'line' [-Wunused-variable]
+../src/main.c:316:11: warning: unused variable 'len' [-Wunused-variable]
+../src/main.c:315:10: warning: unused variable 'data' [-Wunused-variable]
+make: *** [src/main.o] Error 1
+19:58:05 **** Incremental Build of configuration Debug for project demo_GPIO ****
+make all 
+make: Nothing to be done for `all'.
+19:58:06 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+make all 
+make: Nothing to be done for `all'.
+19:58:31 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+19:58:31 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+19:58:32 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+19:58:33 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:320:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:351:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c:404:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:439:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:446:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:521:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:527:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:529:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:531:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:533:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:337:10: warning: unused variable 'btn1' [-Wunused-variable]
+../src/main.c:335:10: warning: unused variable 'state' [-Wunused-variable]
+../src/main.c:333:10: warning: unused variable 'wait' [-Wunused-variable]
+../src/main.c:315:10: warning: unused variable 'line' [-Wunused-variable]
+../src/main.c:314:11: warning: unused variable 'len' [-Wunused-variable]
+../src/main.c:313:10: warning: unused variable 'data' [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39740	   2260	    908	  42908	   a79c	demo.axf
+ 
+19:58:35 **** Incremental Build of configuration Debug for project demo_GPIO ****
+make all 
+make: Nothing to be done for `all'.
+19:58:35 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+make all 
+make: Nothing to be done for `all'.
+20:02:44 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:02:45 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:02:45 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:02:46 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:340:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c:377:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:392:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:427:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:434:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:509:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:515:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:517:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:519:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:521:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:323:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  38764	   2260	    900	  41924	   a3c4	demo.axf
+ 
+20:02:48 **** Incremental Build of configuration Debug for project demo_GPIO ****
+make all 
+make: Nothing to be done for `all'.
+20:02:49 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+make all 
+make: Nothing to be done for `all'.
+20:08:14 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:08:14 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:08:15 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:08:16 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_all':
+../src/main.c:312:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:376:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:391:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:426:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:433:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:508:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:514:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:516:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:518:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:520:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:337:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  38772	   2260	    900	  41932	   a3cc	demo.axf
+ 
+20:08:17 **** Incremental Build of configuration Debug for project demo_GPIO ****
+make all 
+make: Nothing to be done for `all'.
+20:08:18 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+make all 
+make: Nothing to be done for `all'.
+20:10:05 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:10:05 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:10:06 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:10:07 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_all':
+../src/main.c:313:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:375:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:390:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:425:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:432:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:507:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:513:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:515:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:517:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:519:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:338:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  38772	   2260	    900	  41932	   a3cc	demo.axf
+ 
+20:16:49 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:16:49 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:16:50 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:16:51 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_all':
+../src/main.c:314:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:377:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:392:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:428:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:435:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:510:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:516:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:518:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:520:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:522:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:428:8: warning: unused variable 'rotaryval' [-Wunused-variable]
+../src/main.c:340:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:25:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39044	   2260	    900	  42204	   a4dc	demo.axf
+ 
+20:32:54 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:32:55 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:32:55 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:32:56 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:3: error: 'refreshRate' undeclared (first use in this function)
+../src/main.c:220:3: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'init_all':
+../src/main.c:336:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:363:2: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:399:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:414:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:433:8: error: 'state' undeclared (first use in this function)
+../src/main.c:434:17: error: void value not ignored as it ought to be
+../src/main.c:452:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:459:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:534:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:540:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:542:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:544:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:546:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:361:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+20:33:21 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:33:22 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:33:22 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:33:24 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:28:1: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:222:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:231:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:235:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:239:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c: In function 'init_all':
+../src/main.c:338:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:400:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:434:8: error: 'state' undeclared (first use in this function)
+../src/main.c:434:8: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:435:17: error: void value not ignored as it ought to be
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:547:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:363:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+20:33:41 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:33:41 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:33:42 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:33:43 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:28:1: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:222:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:231:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:235:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:239:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c: In function 'init_all':
+../src/main.c:338:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:400:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:435:17: error: void value not ignored as it ought to be
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:547:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:363:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+20:33:44 **** Incremental Build of configuration Debug for project demo_GPIO ****
+make all 
+make: Nothing to be done for `all'.
+20:33:45 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+make all 
+make: Nothing to be done for `all'.
+20:34:44 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:34:45 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:34:45 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:34:47 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:28:1: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:222:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:231:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:235:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:239:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c: In function 'init_all':
+../src/main.c:338:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:400:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:435:17: error: void value not ignored as it ought to be
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:547:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:363:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+20:35:05 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:35:05 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:35:06 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:35:07 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c:28:1: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:222:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:231:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:235:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:239:3: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c: In function 'init_all':
+../src/main.c:338:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:400:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:547:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:363:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39100	   2260	    900	  42260	   a514	demo.axf
+ 
+20:35:08 **** Incremental Build of configuration Debug for project demo_GPIO ****
+make all 
+make: Nothing to be done for `all'.
+20:35:09 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+make all 
+make: Nothing to be done for `all'.
+20:35:58 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:35:58 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:35:59 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:36:00 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/main.c:221:2: error: expected ';' before '}' token
+../src/main.c:224:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/main.c:228:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/main.c:232:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/main.c:236:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:335:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:362:2: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:398:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:413:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:433:17: error: void value not ignored as it ought to be
+../src/main.c:451:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:458:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:533:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:539:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:360:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+20:36:12 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:36:12 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:36:13 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:36:14 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/main.c:224:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/main.c:228:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/main.c:232:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/main.c:236:3: warning: 'return' with a value, in function returning void [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:335:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:362:2: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:398:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:413:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:433:17: error: void value not ignored as it ought to be
+../src/main.c:451:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:458:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:533:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:539:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:360:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+make: *** [src/main.o] Error 1
+20:38:51 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:38:52 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:38:53 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:38:54 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:336:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:363:2: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:399:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:414:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:452:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:459:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:534:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:540:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:542:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:544:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:546:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:361:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39076	   2260	    900	  42236	   a4fc	demo.axf
+ 
+20:40:29 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:40:29 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:40:30 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:40:31 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:336:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:363:2: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:399:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:547:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:361:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39092	   2260	    900	  42252	   a50c	demo.axf
+ 
+20:41:23 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:41:24 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:41:25 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:41:26 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:336:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:363:2: warning: overflow in implicit constant conversion [-Woverflow]
+../src/main.c:399:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:547:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:364:10: warning: variable 'joystickInput' set but not used [-Wunused-but-set-variable]
+../src/main.c:361:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+../src/main.c:218:13: warning: 'update_refresh_rate' defined but not used [-Wunused-function]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  38964	   2260	    900	  42124	   a48c	demo.axf
+ 
+20:42:42 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:42:43 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:42:43 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:42:44 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:336:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:399:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:547:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:364:10: warning: variable 'joystickInput' set but not used [-Wunused-but-set-variable]
+../src/main.c:361:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+../src/main.c:218:13: warning: 'update_refresh_rate' defined but not used [-Wunused-function]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  38964	   2260	    900	  42124	   a48c	demo.axf
+ 
+20:44:53 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:44:54 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:44:54 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:44:55 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:336:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:399:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: passing argument 3 of 'oled_putString' makes pointer from integer without a cast [enabled by default]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'int'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:547:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:549:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:361:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39124	   2260	    900	  42284	   a52c	demo.axf
+ 
+20:47:09 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:47:10 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:47:10 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:47:11 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:336:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:399:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:541:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:543:7: warning: passing argument 3 of 'oled_putString' makes pointer from integer without a cast [enabled by default]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'int'
+../src/main.c:545:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:547:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:549:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:361:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39124	   2260	    900	  42284	   a52c	demo.axf
+ 
+20:48:48 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:48:48 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:48:49 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:48:50 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:336:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:399:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:542:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:544:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:546:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:548:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:550:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:361:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39164	   2260	    900	  42324	   a554	demo.axf
+ 
+20:49:58 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:49:59 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:49:59 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:50:00 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:336:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:399:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:415:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:453:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:535:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:542:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:544:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:546:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:548:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:550:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:361:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39156	   2260	    900	  42316	   a54c	demo.axf
+ 
+20:58:35 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:58:35 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:58:36 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:58:37 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:345:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c:351:2: warning: implicit declaration of function 'UART_Receive_Int_Init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:428:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:444:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:482:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:489:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:564:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:571:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:573:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:575:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:577:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:579:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:390:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+./src/main.o: In function `init_all':
+D:\NUS\Year 2 AY2016-2017\EE2024\demo\Debug/../src/main.c:351: undefined reference to `UART_Receive_Int_Init'
+collect2: ld returned 1 exit status
+make: *** [demo.axf] Error 1
+20:58:47 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+20:58:47 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+20:58:48 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+20:58:49 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:345:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:427:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:443:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:481:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:488:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:563:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:570:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:572:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:574:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:576:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:578:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:389:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39500	   2268	    900	  42668	   a6ac	demo.axf
+ 
+21:00:48 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+21:00:49 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+21:00:49 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+21:00:51 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:345:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:427:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:443:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:481:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:488:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:563:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:569:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:573:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:575:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:577:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:579:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:389:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39500	   2268	    900	  42668	   a6ac	demo.axf
+ 
+21:02:00 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+21:02:01 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+21:02:01 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+21:02:02 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:345:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:427:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:443:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:481:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:488:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:563:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:570:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:572:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:574:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:576:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:562:49: warning: unused variable 'strRefresh' [-Wunused-variable]
+../src/main.c:389:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Command canceled
+21:02:16 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+21:02:17 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+21:02:17 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+21:02:18 **** Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'update_refresh_rate':
+../src/main.c:220:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:225:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:229:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:233:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c:237:15: warning: assignment makes pointer from integer without a cast [enabled by default]
+../src/main.c: In function 'init_all':
+../src/main.c:345:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:427:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:443:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:481:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:488:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:564:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:570:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:573:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:575:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:577:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:579:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:389:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39500	   2268	    900	  42668	   a6ac	demo.axf
+ 
+21:05:11 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+21:05:11 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+21:05:12 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+21:05:15 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+21:05:15 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+21:05:16 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+21:05:17 **** Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_all':
+../src/main.c:322:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:406:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:422:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:442:5: warning: implicit declaration of function 'update_refresh_rate' [-Wimplicit-function-declaration]
+../src/main.c:460:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:467:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:543:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:549:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:553:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:556:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:558:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:560:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:562:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:368:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+./src/main.o: In function `main':
+D:\NUS\Year 2 AY2016-2017\EE2024\demo\Debug/../src/main.c:442: undefined reference to `update_refresh_rate'
+collect2: ld returned 1 exit status
+make: *** [demo.axf] Error 1
+21:05:31 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+21:05:32 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+21:05:32 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+21:05:33 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_all':
+../src/main.c:322:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:406:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:422:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:456:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:463:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:539:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:545:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:549:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:552:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:554:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:556:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:558:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:371:10: warning: unused variable 'joystickInput' [-Wunused-variable]
+../src/main.c:368:10: warning: unused variable 'dir' [-Wunused-variable]
+../src/main.c: At top level:
+../src/main.c:24:16: warning: 'barPos' defined but not used [-Wunused-variable]
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39308	   2268	    900	  42476	   a5ec	demo.axf
+ 
+21:16:12 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+21:16:12 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+21:16:13 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+21:16:14 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_all':
+../src/main.c:351:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:424:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:440:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:474:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:481:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:557:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:563:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:567:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:570:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:572:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:574:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:576:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39516	   2260	    904	  42680	   a6b8	demo.axf
+ 
+21:18:03 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+21:18:04 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+21:18:04 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+21:18:05 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_all':
+../src/main.c:351:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:427:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:443:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:477:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:484:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:560:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:566:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:570:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:573:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:575:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:577:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:579:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39556	   2260	    904	  42720	   a6e0	demo.axf
+ 
+21:23:57 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+21:23:58 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+21:23:58 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+21:23:59 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_all':
+../src/main.c:347:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:423:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:439:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:473:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:480:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:556:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:562:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:566:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:569:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:571:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:573:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:575:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39588	   2260	    904	  42752	   a700	demo.axf
+ 
+21:27:02 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+21:27:02 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+21:27:03 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+21:27:04 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_all':
+../src/main.c:347:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c: In function 'main':
+../src/main.c:420:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:436:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:471:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:478:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:554:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:560:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:564:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:567:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:569:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:571:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:573:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39556	   2260	    904	  42720	   a6e0	demo.axf
+ 
+21:27:05 **** Incremental Build of configuration Debug for project demo_GPIO ****
+make all 
+make: Nothing to be done for `all'.
+21:27:06 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+make all 
+make: Nothing to be done for `all'.
