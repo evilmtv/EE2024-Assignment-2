@@ -361,13 +361,10 @@ void EINT3_IRQHandler(void) {
 		LPC_GPIOINT ->IO0IntClr |= 1 << 4;
 		if (refreshRate == 1000) {
 			refreshRate = 1;
-			alertstatus = 0;
 		} else if (refreshRate == 1) {
 			refreshRate = 2000;
-			alertstatus = 1;
 		} else {
 			refreshRate = 1000;
-			alertstatus = 3;
 		}
 	}
 }
