@@ -19,6 +19,7 @@
 #include "oled.h"
 #include "rgb.h"
 #include "led7seg.h"
+#include "light.h"
 
 static uint8_t barPos = 2;
 
@@ -346,6 +347,7 @@ int main(void) {
 	init_i2c();
 	light_init();
 	light_enable();
+	light_setRange(LIGHT_RANGE_4000);
 	init_ssp();
 	init_GPIO();
 
