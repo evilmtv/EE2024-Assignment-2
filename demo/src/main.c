@@ -24,9 +24,6 @@ static uint8_t barPos = 2;
 
 static char* msg = NULL;
 
-int firedetected = 0;
-int movingindark = 0;
-
 volatile uint32_t msTicks; // counter for 1ms SysTicks
 
 // ****************
@@ -315,6 +312,10 @@ int main(void) {
 	int print_at_f_counter3 = 0;
 	int movement = 0;
 
+	int firedetected = 0;
+	int movingindark = 0;
+	int alertstatus;
+
 	uint32_t previousTime;
 	uint8_t data = 0;
 	uint32_t len = 0;
@@ -424,7 +425,7 @@ int main(void) {
 		if (monitor_state == 1) {
 
 			// Run once every second
-			while ((msTicks - previousTime) <= 1000)
+			while ((msTicks - previousTime) < 1000)
 				;
 			previousTime = msTicks;	// read current tick counter
 
@@ -458,31 +459,52 @@ int main(void) {
 			zold = z;
 
 			/* <---- LIGHT_LOW_WARNING & TEMP_HIGH_WARNING ------ */
+			alertstatus = 1;
 			// Check for user moving in dark places
-			if (movement == 1 && lightval < 700) {
-				movingindark = 0;
-			} else {
+			if (movement == 1 && lightval < 50) {
 				movingindark = 1;
+				alertstatus = alertstatus + 1;
+			} else {
+				movingindark = 0;
 			}
 			// Check if temp exceeds permissible limits
 			if (tempval > 450) {
-				firedetected = 0;
-			} else {
 				firedetected = 1;
+				alertstatus = alertstatus + 2;
+			} else {
+				firedetected = 0;
 			}
 			// Blink LED to alert user accordingly
-			rgb_setLeds(0); // Turn off LEDs
 			int blink_count = 0;
-			while (blink_count < 2) { // Blink twice
-				if (firedetected) {
+			switch (alertstatus) {
+//			case 1: {
+//				rgb_setLeds(0);
+//			}
+			case 2:
+				while (blink_count < 2) { // Blink 3 times
+					rgb_setLeds(2); // Set LED to BLUE
+					systick_delay(100);
+					rgb_setLeds(0); // Turn off LEDs
+					systick_delay(100);
+					blink_count++;
+				}
+			case 3:
+				while (blink_count < 2) { // Blink 3 times
 					rgb_setLeds(1); // Set LED to RED
 					systick_delay(100);
-				}
-				if (movingindark) {
-					rgb_setLeds(2);// Set LED to BLUE
+					rgb_setLeds(0); // Turn off LEDs
 					systick_delay(100);
+					blink_count++;
 				}
-				blink_count++;
+			case 4:
+				while (blink_count < 2) { // Blink 3 times
+					rgb_setLeds(1); // Set LED to RED
+					systick_delay(100);
+					rgb_setLeds(2); // Set LED to BLUE
+					systick_delay(100);
+					rgb_setLeds(0); // Turn off LEDs
+					blink_count++;
+				}
 			}
 
 //			if (y < 0) {
@@ -497,87 +519,80 @@ int main(void) {
 //				wait = 0;
 //		}
 
-		/* <---- Update values on OLED ------ */
-		if (current_tick == 53 || current_tick == 65 || current_tick == 70) {
-			char strLight[25], strTemp[25], strAcc[25];
-			sprintf(strLight, "Light: %d", lightval);
-			sprintf(strTemp, "Temp: %d", tempval);
-			sprintf(strAcc, "A: %d %d %d", x, y, z);
+			/* <---- Update values on OLED ------ */
+			if (current_tick == 53 || current_tick == 65
+					|| current_tick == 70) {
+				char strLight[25], strTemp[25], strAcc[25];
+				sprintf(strLight, "Light: %d", lightval);
+				sprintf(strTemp, "Temp: %d", tempval);
+				sprintf(strAcc, "A: %d %d %d", x, y, z);
 
-			oled_clearScreen(OLED_COLOR_BLACK);
-			oled_putString(10, 10, "MONITOR", OLED_COLOR_WHITE,
-					OLED_COLOR_BLACK);
-			oled_putString(10, 22, strTemp, OLED_COLOR_WHITE, OLED_COLOR_BLACK);
-			oled_putString(10, 34, strLight, OLED_COLOR_WHITE,
-					OLED_COLOR_BLACK);
-			oled_putString(10, 46, strAcc, OLED_COLOR_WHITE, OLED_COLOR_BLACK);
-		}
-
-		/* <---- Send message via UART ------ */
-		if (current_tick == 70) {
-			// Warning messages sent first
-			if (firedetected == 1) {
-				char redmsg[30] = "Fire was Detected.\r\n";
-				UART_Send(LPC_UART3, (uint8_t *) redmsg, strlen(redmsg),
-						BLOCKING);
-			}
-			if (movingindark == 1) {
-				char bluemsg[30] = "Movement in darkness was Detected.\r\n";
-				UART_Send(LPC_UART3, (uint8_t *) bluemsg, strlen(bluemsg),
-						BLOCKING);
+				oled_clearScreen(OLED_COLOR_BLACK);
+				oled_putString(10, 10, "MONITOR", OLED_COLOR_WHITE,
+						OLED_COLOR_BLACK);
+				oled_putString(10, 22, strTemp, OLED_COLOR_WHITE,
+						OLED_COLOR_BLACK);
+				oled_putString(10, 34, strLight, OLED_COLOR_WHITE,
+						OLED_COLOR_BLACK);
+				oled_putString(10, 46, strAcc, OLED_COLOR_WHITE,
+						OLED_COLOR_BLACK);
 			}
 
-			char strToSend[70];
-			sprintf(strToSend, "%d%d%d_-_T%d_L%d_AX%d_AY%d_AZ%d\r\n",
-					print_at_f_counter3, print_at_f_counter2,
-					print_at_f_counter1, tempval, lightval, x, y, z);
-			UART_Send(LPC_UART3, (uint8_t *) strToSend, strlen(strToSend),
-					BLOCKING);
+			/* <---- Send message via UART ------ */
+			if (current_tick == 70) {
+				// Warning messages sent first
+				if (firedetected == 1) {
+					char redmsg[30] = "Fire was Detected.\r\n";
+					UART_Send(LPC_UART3, (uint8_t *) redmsg, strlen(redmsg),
+							BLOCKING);
+				}
+				if (movingindark == 1) {
+					char bluemsg[40] = "Movement in darkness was Detected.\r\n";
+					UART_Send(LPC_UART3, (uint8_t *) bluemsg, strlen(bluemsg),
+							BLOCKING);
+				}
 
-			print_at_f_counter1++;
-			if (print_at_f_counter1 > 9) {
-				print_at_f_counter1 = 0;
-				print_at_f_counter2++;
-				if (print_at_f_counter2 > 9) {
-					print_at_f_counter3++;
+				char strToSend[70];
+				sprintf(strToSend, "%d%d%d_-_T%d_L%d_AX%d_AY%d_AZ%d\r\n",
+						print_at_f_counter3, print_at_f_counter2,
+						print_at_f_counter1, tempval, lightval, x, y, z);
+				UART_Send(LPC_UART3, (uint8_t *) strToSend, strlen(strToSend),
+						BLOCKING);
+
+				print_at_f_counter1++;
+				if (print_at_f_counter1 > 9) {
+					print_at_f_counter1 = 0;
+					print_at_f_counter2++;
+					if (print_at_f_counter2 > 9) {
+						print_at_f_counter3++;
+					}
 				}
 			}
-		}
 
-		/* ####### Joystick and OLED  ###### */
-		/* # */
+			/* ####### Joystick and OLED  ###### */
+			/* # */
 
 //			state = joystick_read();
 //			if (state != 0)
 //				drawOled(state);
-		/* # */
-		/* ############################################# */
+			/* # */
+			/* ############################################# */
 
-		/* ############ Trimpot and RGB LED  ########### */
-		/* # */
+			/*if (btn1 == 0)
+			 {
+			 playSong(song);
+			 } */
 
-		/*rgb_setLeds(4);
-		 systick_delay(100);
-		 rgb_setLeds(2);
-		 systick_delay(100);
-		 rgb_setLeds(4);
-		 systick_delay(100);*/
-
-		/*if (btn1 == 0)
-		 {
-		 playSong(song);
-		 } */
-
-		Timer0_Wait(1);
+			Timer0_Wait(1);
+		}
 	}
-}
 }
 
 void check_failed(uint8_t *file, uint32_t line) {
-/* User can add his own implementation to report the file name and line number,
- ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+	/* User can add his own implementation to report the file name and line number,
+	 ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
 
-/* Infinite loop */
-while (1)
-	;
+	/* Infinite loop */
+	while (1)
+		;
 }

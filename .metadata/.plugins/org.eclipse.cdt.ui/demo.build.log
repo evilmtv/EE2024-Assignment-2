@@ -1,37 +1,36 @@
-17:15:09 **** Incremental Build of configuration Debug for project demo ****
+18:15:39 **** Incremental Build of configuration Debug for project demo ****
 make all 
 Building file: ../src/main.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main':
-../src/main.c:326:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
-../src/main.c:346:2: warning: implicit declaration of function 'light_init' [-Wimplicit-function-declaration]
-../src/main.c:347:2: warning: implicit declaration of function 'light_enable' [-Wimplicit-function-declaration]
-../src/main.c:356:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
-../src/main.c:410:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+../src/main.c:327:2: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+../src/main.c:347:2: warning: implicit declaration of function 'light_init' [-Wimplicit-function-declaration]
+../src/main.c:348:2: warning: implicit declaration of function 'light_enable' [-Wimplicit-function-declaration]
+../src/main.c:357:2: warning: implicit declaration of function 'temp_init' [-Wimplicit-function-declaration]
+../src/main.c:411:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
 D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:442:4: warning: implicit declaration of function 'light_read' [-Wimplicit-function-declaration]
-../src/main.c:443:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
-../src/main.c:450:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
-../src/main.c:503:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-../src/main.c:509:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+../src/main.c:443:4: warning: implicit declaration of function 'light_read' [-Wimplicit-function-declaration]
+../src/main.c:444:4: warning: implicit declaration of function 'temp_read' [-Wimplicit-function-declaration]
+../src/main.c:451:4: warning: implicit declaration of function 'abs' [-Wimplicit-function-declaration]
+../src/main.c:526:5: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+../src/main.c:532:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
 D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:510:4: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+../src/main.c:534:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
 D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:512:6: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+../src/main.c:536:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
 D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:513:4: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+../src/main.c:538:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
 D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:525:24: warning: initializer-string for array of chars is too long [enabled by default]
-../src/main.c:343:10: warning: unused variable 'btn1' [-Wunused-variable]
-../src/main.c:341:10: warning: unused variable 'state' [-Wunused-variable]
-../src/main.c:339:10: warning: unused variable 'wait' [-Wunused-variable]
-../src/main.c:321:10: warning: unused variable 'line' [-Wunused-variable]
-../src/main.c:320:11: warning: unused variable 'len' [-Wunused-variable]
-../src/main.c:319:10: warning: unused variable 'data' [-Wunused-variable]
+../src/main.c:344:10: warning: unused variable 'btn1' [-Wunused-variable]
+../src/main.c:342:10: warning: unused variable 'state' [-Wunused-variable]
+../src/main.c:340:10: warning: unused variable 'wait' [-Wunused-variable]
+../src/main.c:322:10: warning: unused variable 'line' [-Wunused-variable]
+../src/main.c:321:11: warning: unused variable 'len' [-Wunused-variable]
+../src/main.c:320:10: warning: unused variable 'data' [-Wunused-variable]
 ../src/main.c: At top level:
-../src/main.c:188:13: warning: 'playSong' defined but not used [-Wunused-function]
-../src/main.c:216:18: warning: 'song' defined but not used [-Wunused-variable]
+../src/main.c:185:13: warning: 'playSong' defined but not used [-Wunused-function]
+../src/main.c:213:18: warning: 'song' defined but not used [-Wunused-variable]
 Finished building: ../src/main.c
  
 Building target: demo.axf
@@ -43,8 +42,8 @@ make --no-print-directory post-build
 Performing post-build steps
 arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
    text	   data	    bss	    dec	    hex	filename
-  39308	   2324	    916	  42548	   a634	demo.axf
+  39468	   2324	    908	  42700	   a6cc	demo.axf
  
 
-17:15:09 Build Finished (took 579ms)
+18:15:39 Build Finished (took 649ms)
 

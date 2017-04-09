@@ -1,6 +1,16 @@
-17:14:54 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+18:08:34 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
 make all 
-make: Nothing to be done for `all'.
+Building target: demo_GPIO_Int.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo_GPIO_Int.map -mcpu=cortex-m3 -mthumb -T "demo_GPIO_Int_Debug.ld" -o "demo_GPIO_Int.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo_GPIO_Int.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_GPIO_Int.axf; # arm-none-eabi-objdump -h -S demo_GPIO_Int.axf >demo_GPIO_Int.lss
+   text	   data	    bss	    dec	    hex	filename
+  28664	   2268	    116	  31048	   7948	demo_GPIO_Int.axf
+ 
 
-17:14:54 Build Finished (took 76ms)
+18:08:35 Build Finished (took 280ms)
 

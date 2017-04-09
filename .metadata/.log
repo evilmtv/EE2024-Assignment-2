@@ -2372,3 +2372,30 @@ java.io.FileNotFoundException: D:\NUS\Year 2 AY2016-2017\EE2024\demo\Debug\demo.
 	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
 	at com.crt.ctrlcenter.launch.BuildLaunchUtils$2.run(Unknown Source)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2017-04-09 17:40:22.429
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: D:\NUS\Year 2 AY2016-2017\EE2024\demo\Debug\demo.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at com.crt.ctrlcenter.launch.BuildLaunchUtils$2.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2017-04-09 17:40:22.429
+!MESSAGE D:\NUS\Year 2 AY2016-2017\EE2024\demo\Debug\demo.axf not found
+!STACK 0
+java.io.FileNotFoundException: D:\NUS\Year 2 AY2016-2017\EE2024\demo\Debug\demo.axf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:124)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:286)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugSession(GdbLaunchDelegate.java:143)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launchDebugger(GdbLaunchDelegate.java:106)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.launch(GdbLaunchDelegate.java:94)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:704)
+	at com.crt.ctrlcenter.launch.BuildLaunchUtils$2.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
