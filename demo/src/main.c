@@ -30,8 +30,9 @@
 #include "light.h"
 #include "temp.h"
 
-int32_t refreshRate = 1000;
-int8_t alertStatus = 0;
+static uint8_t monitorState = 0;
+static int32_t refreshRate = 1000;
+static int8_t alertStatus = 0;
 static char* msg = NULL;
 volatile uint32_t msTicks; // counter for 1ms SysTicks
 
@@ -40,26 +41,28 @@ void SysTick_Handler(void) {
 	msTicks++;
 
 	// Blink LED to alert user accordingly
-	if (alertStatus == 1) {
-		if (msTicks % 333 == 0) {
-			rgb_setLeds(2); // Set LED to BLUE
-		}
-		if ((msTicks + 167) % 333 == 0) {
-			rgb_setLeds(0); // Turn off LEDs
-		}
-	} else if (alertStatus == 2) {
-		if (msTicks % 333 == 0) {
-			rgb_setLeds(1); // Set LED to RED
-		}
-		if ((msTicks + 167) % 333 == 0) {
-			rgb_setLeds(0); // Turn off LEDs
-		}
-	} else if (alertStatus == 3) {
-		if (msTicks % 333 == 0) {
-			rgb_setLeds(2); // Set LED to BLUE
-		}
-		if ((msTicks + 167) % 333 == 0) {
-			rgb_setLeds(1); // Set LED to RED
+	if (monitorState == 1) {
+		if (alertStatus == 1) {
+			if (msTicks % 333 == 0) {
+				rgb_setLeds(2); // Set LED to BLUE
+			}
+			if ((msTicks + 167) % 333 == 0) {
+				rgb_setLeds(0); // Turn off LEDs
+			}
+		} else if (alertStatus == 2) {
+			if (msTicks % 333 == 0) {
+				rgb_setLeds(1); // Set LED to RED
+			}
+			if ((msTicks + 167) % 333 == 0) {
+				rgb_setLeds(0); // Turn off LEDs
+			}
+		} else if (alertStatus == 3) {
+			if (msTicks % 333 == 0) {
+				rgb_setLeds(2); // Set LED to BLUE
+			}
+			if ((msTicks + 167) % 333 == 0) {
+				rgb_setLeds(1); // Set LED to RED
+			}
 		}
 	}
 }
@@ -217,7 +220,6 @@ int main(void) {
 	 * "A good example is long. On one machine, it might be 32 bits (the minimum required by C). On another, it's 64 bits."
 	 */
 	uint32_t debounceTime = 0;
-	uint8_t monitorState = 0;
 	uint32_t currentTick = 48;
 	uint8_t uartCounterThirdDigit = 0;
 	uint8_t uartCounterSecondDigit = 0;
