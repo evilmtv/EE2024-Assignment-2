@@ -735,3 +735,804 @@ arm-none-eabi-size demo_GPIO_Int.axf; # arm-none-eabi-objdump -h -S demo_GPIO_In
    text	   data	    bss	    dec	    hex	filename
   28664	   2268	    116	  31048	   7948	demo_GPIO_Int.axf
  
+23:18:33 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+23:18:34 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+23:18:34 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+23:18:35 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:278:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:365:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:369:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:372:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:374:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:376:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:378:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39596	   2292	    904	  42792	   a728	demo.axf
+ 
+23:18:37 **** Incremental Build of configuration Debug for project demo_GPIO ****
+make all 
+make: Nothing to be done for `all'.
+23:18:38 **** Incremental Build of configuration Debug for project demo_GPIO_Int ****
+make all 
+make: Nothing to be done for `all'.
+23:20:03 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+23:20:04 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+23:20:04 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+23:20:05 **** Incremental Build of configuration Debug for project demo ****
+make all 
+make: Nothing to be done for `all'.
+23:26:43 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+23:26:44 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+23:26:44 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+23:26:45 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:282:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:373:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:377:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:380:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:382:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:384:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:386:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39660	   2292	    904	  42856	   a768	demo.axf
+ 
+23:27:25 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+23:27:25 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+23:27:26 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+23:27:26 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:282:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:373:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:377:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:380:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:382:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:384:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:386:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39660	   2292	    904	  42856	   a768	demo.axf
+ 
+23:29:06 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+23:29:06 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+23:29:06 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+23:29:07 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:282:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:369:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:373:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:376:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:378:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:380:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:382:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39604	   2292	    904	  42800	   a730	demo.axf
+ 
+23:29:46 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+23:29:46 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+23:29:47 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+23:29:47 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:283:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:370:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:374:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:377:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:379:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:381:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:383:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39612	   2292	    904	  42808	   a738	demo.axf
+ 
+23:30:49 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+23:30:50 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+23:30:50 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+23:30:51 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:283:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:371:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:375:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:378:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:380:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:382:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:384:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39644	   2292	    904	  42840	   a758	demo.axf
+ 
+23:31:48 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+23:31:48 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+23:31:49 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+23:31:50 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:283:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:375:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:379:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:382:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:384:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:386:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:388:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39644	   2292	    904	  42840	   a758	demo.axf
+ 
+00:02:39 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+00:02:40 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+00:02:40 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+00:02:41 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:271:15: error: incompatible types when assigning to type 'char[25]' from type 'char *'
+../src/main.c:272:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:276:7: error: redeclaration of 'checkMessage' with no linkage
+../src/main.c:270:7: note: previous declaration of 'checkMessage' was here
+../src/main.c:277:15: error: incompatible types when assigning to type 'char[25]' from type 'char *'
+../src/main.c:278:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:303:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:395:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:399:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:402:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:404:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:406:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:408:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+make: *** [src/main.o] Error 1
+00:03:37 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+00:03:38 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+00:03:38 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+00:03:39 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:272:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:277:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:301:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:393:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:397:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:400:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:402:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:404:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:406:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39908	   2292	    904	  43104	   a860	demo.axf
+ 
+00:05:46 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+00:05:47 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+00:05:47 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+00:05:48 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:270:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:276:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:302:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:394:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:398:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:401:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:403:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:405:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:407:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39908	   2292	    904	  43104	   a860	demo.axf
+ 
+00:07:02 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+00:07:02 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+00:07:03 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+00:07:04 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:270:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:276:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:304:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:396:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:400:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:403:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:405:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:407:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:409:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  39924	   2292	    904	  43120	   a870	demo.axf
+ 
+00:11:46 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+00:11:46 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+00:11:47 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+00:11:48 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:270:25: warning: unknown escape sequence: '\_' [enabled by default]
+../src/main.c:272:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:278:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:283:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:311:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:403:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:407:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:410:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:412:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:414:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:416:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  40036	   2292	    904	  43232	   a8e0	demo.axf
+ 
+00:16:36 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+00:16:37 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+00:16:37 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+00:16:38 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:272:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:278:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:283:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:311:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:403:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:407:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:410:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:412:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:414:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:416:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  40028	   2292	    904	  43224	   a8d8	demo.axf
+ 
+00:18:31 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+00:18:31 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+00:18:32 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+00:18:33 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:272:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:278:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:283:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:311:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:403:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:407:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:410:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:412:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:414:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:416:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  40028	   2292	    904	  43224	   a8d8	demo.axf
+ 
+00:19:48 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+00:19:48 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+00:19:49 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+00:19:50 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:272:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:278:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:283:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:311:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:403:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:407:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:410:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:412:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:414:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:416:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  40028	   2292	    904	  43224	   a8d8	demo.axf
+ 
+00:32:21 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make all 
+make: Nothing to be done for `all'.
+00:32:22 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: Nothing to be done for `all'.
+00:32:22 **** Incremental Build of configuration Debug for project Lib_EaBaseBoard ****
+make all 
+make: Nothing to be done for `all'.
+00:32:23 **** Incremental Build of configuration Debug for project demo ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:273:5: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:279:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:284:2: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:312:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:404:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:408:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:411:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:413:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:415:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+../src/main.c:417:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
+D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
+Finished building: ../src/main.c
+ 
+Building target: demo.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
+Finished building target: demo.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
+   text	   data	    bss	    dec	    hex	filename
+  40028	   2292	    904	  43224	   a8d8	demo.axf
+ 
+00:43:19 **** Clean-only build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make clean 
+rm -rf  ./src/core_cm3.o ./src/system_LPC17xx.o  ./src/core_cm3.d ./src/system_LPC17xx.d  libCMSISv1p30_LPC17xx.a
+ 
+00:43:19 **** Clean-only build of configuration Debug for project Lib_MCU ****
+make clean 
+rm -rf  ./src/lpc17xx_adc.o ./src/lpc17xx_can.o ./src/lpc17xx_clkpwr.o ./src/lpc17xx_dac.o ./src/lpc17xx_emac.o ./src/lpc17xx_gpio.o ./src/lpc17xx_i2c.o ./src/lpc17xx_i2s.o ./src/lpc17xx_libcfg_default.o ./src/lpc17xx_mcpwm.o ./src/lpc17xx_nvic.o ./src/lpc17xx_pinsel.o ./src/lpc17xx_pwm.o ./src/lpc17xx_qei.o ./src/lpc17xx_rit.o ./src/lpc17xx_rtc.o ./src/lpc17xx_spi.o ./src/lpc17xx_ssp.o ./src/lpc17xx_timer.o ./src/lpc17xx_uart.o ./src/lpc17xx_wdt.o  ./src/lpc17xx_adc.d ./src/lpc17xx_can.d ./src/lpc17xx_clkpwr.d ./src/lpc17xx_dac.d ./src/lpc17xx_emac.d ./src/lpc17xx_gpio.d ./src/lpc17xx_i2c.d ./src/lpc17xx_i2s.d ./src/lpc17xx_libcfg_default.d ./src/lpc17xx_mcpwm.d ./src/lpc17xx_nvic.d ./src/lpc17xx_pinsel.d ./src/lpc17xx_pwm.d ./src/lpc17xx_qei.d ./src/lpc17xx_rit.d ./src/lpc17xx_rtc.d ./src/lpc17xx_spi.d ./src/lpc17xx_ssp.d ./src/lpc17xx_timer.d ./src/lpc17xx_uart.d ./src/lpc17xx_wdt.d  libLib_MCU.a
+ 
+00:43:19 **** Clean-only build of configuration Debug for project Lib_EaBaseBoard ****
+make clean 
+rm -rf  ./src/acc.o ./src/eeprom.o ./src/flash.o ./src/font5x7.o ./src/joystick.o ./src/led7seg.o ./src/light.o ./src/oled.o ./src/pca9532.o ./src/rgb.o ./src/rotary.o ./src/temp.o ./src/uart2.o  ./src/acc.d ./src/eeprom.d ./src/flash.d ./src/font5x7.d ./src/joystick.d ./src/led7seg.d ./src/light.d ./src/oled.d ./src/pca9532.d ./src/rgb.d ./src/rotary.d ./src/temp.d ./src/uart2.d  libLib_EaBaseBoard.a
+ 
+00:43:19 **** Clean-only build of configuration Debug for project demo ****
+make clean 
+rm -rf  ./src/cr_startup_lpc17.o ./src/main.o  ./src/cr_startup_lpc17.d ./src/main.d  demo.axf
+ 
+00:43:22 **** Clean-only build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make clean 
+rm -rf  ./src/core_cm3.o ./src/system_LPC17xx.o  ./src/core_cm3.d ./src/system_LPC17xx.d  libCMSISv1p30_LPC17xx.a
+ 
+00:43:22 **** Clean-only build of configuration Debug for project Lib_MCU ****
+make clean 
+rm -rf  ./src/lpc17xx_adc.o ./src/lpc17xx_can.o ./src/lpc17xx_clkpwr.o ./src/lpc17xx_dac.o ./src/lpc17xx_emac.o ./src/lpc17xx_gpio.o ./src/lpc17xx_i2c.o ./src/lpc17xx_i2s.o ./src/lpc17xx_libcfg_default.o ./src/lpc17xx_mcpwm.o ./src/lpc17xx_nvic.o ./src/lpc17xx_pinsel.o ./src/lpc17xx_pwm.o ./src/lpc17xx_qei.o ./src/lpc17xx_rit.o ./src/lpc17xx_rtc.o ./src/lpc17xx_spi.o ./src/lpc17xx_ssp.o ./src/lpc17xx_timer.o ./src/lpc17xx_uart.o ./src/lpc17xx_wdt.o  ./src/lpc17xx_adc.d ./src/lpc17xx_can.d ./src/lpc17xx_clkpwr.d ./src/lpc17xx_dac.d ./src/lpc17xx_emac.d ./src/lpc17xx_gpio.d ./src/lpc17xx_i2c.d ./src/lpc17xx_i2s.d ./src/lpc17xx_libcfg_default.d ./src/lpc17xx_mcpwm.d ./src/lpc17xx_nvic.d ./src/lpc17xx_pinsel.d ./src/lpc17xx_pwm.d ./src/lpc17xx_qei.d ./src/lpc17xx_rit.d ./src/lpc17xx_rtc.d ./src/lpc17xx_spi.d ./src/lpc17xx_ssp.d ./src/lpc17xx_timer.d ./src/lpc17xx_uart.d ./src/lpc17xx_wdt.d  libLib_MCU.a
+ 
+00:43:23 **** Clean-only build of configuration Debug for project Lib_EaBaseBoard ****
+make clean 
+rm -rf  ./src/acc.o ./src/eeprom.o ./src/flash.o ./src/font5x7.o ./src/joystick.o ./src/led7seg.o ./src/light.o ./src/oled.o ./src/pca9532.o ./src/rgb.o ./src/rotary.o ./src/temp.o ./src/uart2.o  ./src/acc.d ./src/eeprom.d ./src/flash.d ./src/font5x7.d ./src/joystick.d ./src/led7seg.d ./src/light.d ./src/oled.d ./src/pca9532.d ./src/rgb.d ./src/rotary.d ./src/temp.d ./src/uart2.d  libLib_EaBaseBoard.a
+ 
+00:43:23 **** Clean-only build of configuration Debug for project demo_GPIO ****
+make clean 
+rm -rf  ./src/cr_startup_lpc17.o ./src/main.o  ./src/cr_startup_lpc17.d ./src/main.d  demo_GPIO.axf
+ 
+00:43:24 **** Clean-only build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make clean 
+rm -rf  ./src/core_cm3.o ./src/system_LPC17xx.o  ./src/core_cm3.d ./src/system_LPC17xx.d  libCMSISv1p30_LPC17xx.a
+ 
+00:43:25 **** Clean-only build of configuration Debug for project Lib_MCU ****
+make clean 
+rm -rf  ./src/lpc17xx_adc.o ./src/lpc17xx_can.o ./src/lpc17xx_clkpwr.o ./src/lpc17xx_dac.o ./src/lpc17xx_emac.o ./src/lpc17xx_gpio.o ./src/lpc17xx_i2c.o ./src/lpc17xx_i2s.o ./src/lpc17xx_libcfg_default.o ./src/lpc17xx_mcpwm.o ./src/lpc17xx_nvic.o ./src/lpc17xx_pinsel.o ./src/lpc17xx_pwm.o ./src/lpc17xx_qei.o ./src/lpc17xx_rit.o ./src/lpc17xx_rtc.o ./src/lpc17xx_spi.o ./src/lpc17xx_ssp.o ./src/lpc17xx_timer.o ./src/lpc17xx_uart.o ./src/lpc17xx_wdt.o  ./src/lpc17xx_adc.d ./src/lpc17xx_can.d ./src/lpc17xx_clkpwr.d ./src/lpc17xx_dac.d ./src/lpc17xx_emac.d ./src/lpc17xx_gpio.d ./src/lpc17xx_i2c.d ./src/lpc17xx_i2s.d ./src/lpc17xx_libcfg_default.d ./src/lpc17xx_mcpwm.d ./src/lpc17xx_nvic.d ./src/lpc17xx_pinsel.d ./src/lpc17xx_pwm.d ./src/lpc17xx_qei.d ./src/lpc17xx_rit.d ./src/lpc17xx_rtc.d ./src/lpc17xx_spi.d ./src/lpc17xx_ssp.d ./src/lpc17xx_timer.d ./src/lpc17xx_uart.d ./src/lpc17xx_wdt.d  libLib_MCU.a
+ 
+00:43:25 **** Clean-only build of configuration Debug for project Lib_EaBaseBoard ****
+make clean 
+rm -rf  ./src/acc.o ./src/eeprom.o ./src/flash.o ./src/font5x7.o ./src/joystick.o ./src/led7seg.o ./src/light.o ./src/oled.o ./src/pca9532.o ./src/rgb.o ./src/rotary.o ./src/temp.o ./src/uart2.o  ./src/acc.d ./src/eeprom.d ./src/flash.d ./src/font5x7.d ./src/joystick.d ./src/led7seg.d ./src/light.d ./src/oled.d ./src/pca9532.d ./src/rgb.d ./src/rotary.d ./src/temp.d ./src/uart2.d  libLib_EaBaseBoard.a
+ 
+00:43:25 **** Clean-only build of configuration Debug for project demo_GPIO_Int ****
+make clean 
+rm -rf  ./src/cr_startup_lpc17.o ./src/main.o  ./src/cr_startup_lpc17.d ./src/main.d  demo_GPIO_Int.axf
+ 
+00:43:27 **** Clean-only build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make clean 
+rm -rf  ./src/core_cm3.o ./src/system_LPC17xx.o  ./src/core_cm3.d ./src/system_LPC17xx.d  libCMSISv1p30_LPC17xx.a
+ 
+00:43:29 **** Clean-only build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make clean 
+rm -rf  ./src/core_cm3.o ./src/system_LPC17xx.o  ./src/core_cm3.d ./src/system_LPC17xx.d  libCMSISv1p30_LPC17xx.a
+ 
+00:43:30 **** Clean-only build of configuration Debug for project Lib_MCU ****
+make clean 
+rm -rf  ./src/lpc17xx_adc.o ./src/lpc17xx_can.o ./src/lpc17xx_clkpwr.o ./src/lpc17xx_dac.o ./src/lpc17xx_emac.o ./src/lpc17xx_gpio.o ./src/lpc17xx_i2c.o ./src/lpc17xx_i2s.o ./src/lpc17xx_libcfg_default.o ./src/lpc17xx_mcpwm.o ./src/lpc17xx_nvic.o ./src/lpc17xx_pinsel.o ./src/lpc17xx_pwm.o ./src/lpc17xx_qei.o ./src/lpc17xx_rit.o ./src/lpc17xx_rtc.o ./src/lpc17xx_spi.o ./src/lpc17xx_ssp.o ./src/lpc17xx_timer.o ./src/lpc17xx_uart.o ./src/lpc17xx_wdt.o  ./src/lpc17xx_adc.d ./src/lpc17xx_can.d ./src/lpc17xx_clkpwr.d ./src/lpc17xx_dac.d ./src/lpc17xx_emac.d ./src/lpc17xx_gpio.d ./src/lpc17xx_i2c.d ./src/lpc17xx_i2s.d ./src/lpc17xx_libcfg_default.d ./src/lpc17xx_mcpwm.d ./src/lpc17xx_nvic.d ./src/lpc17xx_pinsel.d ./src/lpc17xx_pwm.d ./src/lpc17xx_qei.d ./src/lpc17xx_rit.d ./src/lpc17xx_rtc.d ./src/lpc17xx_spi.d ./src/lpc17xx_ssp.d ./src/lpc17xx_timer.d ./src/lpc17xx_uart.d ./src/lpc17xx_wdt.d  libLib_MCU.a
+ 
+00:43:30 **** Clean-only build of configuration Debug for project Lib_EaBaseBoard ****
+make clean 
+rm -rf  ./src/acc.o ./src/eeprom.o ./src/flash.o ./src/font5x7.o ./src/joystick.o ./src/led7seg.o ./src/light.o ./src/oled.o ./src/pca9532.o ./src/rgb.o ./src/rotary.o ./src/temp.o ./src/uart2.o  ./src/acc.d ./src/eeprom.d ./src/flash.d ./src/font5x7.d ./src/joystick.d ./src/led7seg.d ./src/light.d ./src/oled.d ./src/pca9532.d ./src/rgb.d ./src/rotary.d ./src/temp.d ./src/uart2.d  libLib_EaBaseBoard.a
+ 
+00:43:32 **** Clean-only build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make clean 
+rm -rf  ./src/core_cm3.o ./src/system_LPC17xx.o  ./src/core_cm3.d ./src/system_LPC17xx.d  libCMSISv1p30_LPC17xx.a
+ 
+00:43:32 **** Clean-only build of configuration Debug for project Lib_MCU ****
+make clean 
+rm -rf  ./src/lpc17xx_adc.o ./src/lpc17xx_can.o ./src/lpc17xx_clkpwr.o ./src/lpc17xx_dac.o ./src/lpc17xx_emac.o ./src/lpc17xx_gpio.o ./src/lpc17xx_i2c.o ./src/lpc17xx_i2s.o ./src/lpc17xx_libcfg_default.o ./src/lpc17xx_mcpwm.o ./src/lpc17xx_nvic.o ./src/lpc17xx_pinsel.o ./src/lpc17xx_pwm.o ./src/lpc17xx_qei.o ./src/lpc17xx_rit.o ./src/lpc17xx_rtc.o ./src/lpc17xx_spi.o ./src/lpc17xx_ssp.o ./src/lpc17xx_timer.o ./src/lpc17xx_uart.o ./src/lpc17xx_wdt.o  ./src/lpc17xx_adc.d ./src/lpc17xx_can.d ./src/lpc17xx_clkpwr.d ./src/lpc17xx_dac.d ./src/lpc17xx_emac.d ./src/lpc17xx_gpio.d ./src/lpc17xx_i2c.d ./src/lpc17xx_i2s.d ./src/lpc17xx_libcfg_default.d ./src/lpc17xx_mcpwm.d ./src/lpc17xx_nvic.d ./src/lpc17xx_pinsel.d ./src/lpc17xx_pwm.d ./src/lpc17xx_qei.d ./src/lpc17xx_rit.d ./src/lpc17xx_rtc.d ./src/lpc17xx_spi.d ./src/lpc17xx_ssp.d ./src/lpc17xx_timer.d ./src/lpc17xx_uart.d ./src/lpc17xx_wdt.d  libLib_MCU.a
+ 

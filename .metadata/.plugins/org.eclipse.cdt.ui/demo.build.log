@@ -1,16 +1,7 @@
-23:03:36 **** Incremental Build of configuration Debug for project demo ****
-make all 
-Building target: demo.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
-Finished building target: demo.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
-   text	   data	    bss	    dec	    hex	filename
-  39604	   2292	    904	  42800	   a730	demo.axf
+00:43:19 **** Clean-only build of configuration Debug for project demo ****
+make clean 
+rm -rf  ./src/cr_startup_lpc17.o ./src/main.o  ./src/cr_startup_lpc17.d ./src/main.d  demo.axf
  
 
-23:03:36 Build Finished (took 278ms)
+00:43:19 Build Finished (took 77ms)
 
