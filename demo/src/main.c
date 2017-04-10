@@ -3,7 +3,7 @@
  *	Lim Jun Hao	(A0147944U)
  *	Luo Ruikang	(A0164638W)
  *
- *	NOTE: Code is not refactorized for readability
+ *	NOTE: Code is not refactorized for readability reasons
  *
  *	Code based off EE2024 demo code
  *	Copyright(C) 2011, EE2024
