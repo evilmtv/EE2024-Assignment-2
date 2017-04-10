@@ -218,6 +218,7 @@ int main(void) {
 	 * 8bit signed -> -128~+127
 	 * "A good example is long. On one machine, it might be 32 bits (the minimum required by C). On another, it's 64 bits."
 	 */
+	uint8_t isSw4Pressed = 1;
 	uint32_t debounceTime = 0;
 	uint32_t currentTick = 48;
 	uint8_t uartCounterThirdDigit = 0;
@@ -263,9 +264,42 @@ int main(void) {
 	oled_clearScreen(OLED_COLOR_BLACK);
 	previousTime = msTicks;
 
+	/* <---- Bootup animation ------ */
+	char bootupMessage[25];
+	int horizontalAxis = 0;
+	sprintf(bootupMessage, "(>^.^)>");
+	while (horizontalAxis < 91) {
+		oled_putString(horizontalAxis, 30, bootupMessage, OLED_COLOR_WHITE,
+				OLED_COLOR_BLACK);
+		systick_delay(10);
+		oled_clearScreen(OLED_COLOR_BLACK);
+		horizontalAxis++;
+	}
+	sprintf(bootupMessage, "rgbLED Red");
+	oled_putString(10, 20, bootupMessage, OLED_COLOR_WHITE, OLED_COLOR_BLACK);
+	rgb_setLeds(1);
+	systick_delay(500);
+	sprintf(bootupMessage, "rgbLED Blue");
+	oled_clearScreen(OLED_COLOR_BLACK);
+	oled_putString(10, 20, bootupMessage, OLED_COLOR_WHITE, OLED_COLOR_BLACK);
+	rgb_setLeds(2);
+	systick_delay(500);
+	rgb_setLeds(0);
+	oled_clearScreen(OLED_COLOR_WHITE);
+	systick_delay(500);
+	oled_clearScreen(OLED_COLOR_BLACK);
+
+	while (((GPIO_ReadValue(1) >> 31) & 0x01)) {
+		;
+	}
+
 	while (1) {
 		/* <---- State Manager ------ */
-		if (((GPIO_ReadValue(1) >> 31) & 0x01) == 0) {
+		if (isSw4Pressed == 1) {
+			isSw4Pressed = ((GPIO_ReadValue(1) >> 31) & 0x01);
+		}
+		if (isSw4Pressed == 0) {
+			isSw4Pressed = 1;
 			if ((msTicks - debounceTime) > 500) {
 				if (monitorState == 0) {
 					msg = "Entering MONITOR Mode.\r\n";
@@ -281,6 +315,7 @@ int main(void) {
 					UART_Send(LPC_UART3, (uint8_t *) msg, strlen(msg),
 							BLOCKING);
 					monitorState = 0; // Stable state
+					currentTick = 48; // Reset currentTick
 					rgb_setLeds(0); // Turn off rgbLeds
 					led7seg_setChar(32, FALSE); // Clear led7seg display
 					oled_clearScreen(OLED_COLOR_BLACK); // Clear oled screen
@@ -352,6 +387,10 @@ int main(void) {
 				}
 			}
 
+			if (isSw4Pressed == 1) {
+				isSw4Pressed = ((GPIO_ReadValue(1) >> 31) & 0x01);
+			}
+
 			/* <---- printProcessedSensorValuesOnOled ------ */
 			if (currentTick == 53 || currentTick == 65 || currentTick == 70) {
 				oled_clearScreen(OLED_COLOR_BLACK);
@@ -399,6 +438,7 @@ int main(void) {
 				UART_Send(LPC_UART3, (uint8_t *) strToSend, strlen(strToSend),
 						BLOCKING);
 
+				// It is assumed that 999 will never be reached.
 				uartCounterThirdDigit++;
 				if (uartCounterThirdDigit > 9) {
 					uartCounterThirdDigit = 0;
