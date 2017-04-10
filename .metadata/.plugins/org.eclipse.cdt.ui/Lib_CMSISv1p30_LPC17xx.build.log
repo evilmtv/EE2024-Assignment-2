@@ -1,6 +1,7 @@
-21:27:02 **** Incremental Build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
-make all 
-make: Nothing to be done for `all'.
+22:04:03 **** Clean-only build of configuration Debug for project Lib_CMSISv1p30_LPC17xx ****
+make clean 
+rm -rf  ./src/core_cm3.o ./src/system_LPC17xx.o  ./src/core_cm3.d ./src/system_LPC17xx.d  libCMSISv1p30_LPC17xx.a
+ 
 
-21:27:02 Build Finished (took 74ms)
+22:04:03 Build Finished (took 77ms)
 

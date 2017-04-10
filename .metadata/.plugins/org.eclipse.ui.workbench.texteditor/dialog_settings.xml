@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="257" key="DIALOG_WIDTH"/>
-		<item value="304" key="DIALOG_Y_ORIGIN"/>
+		<item value="166" key="DIALOG_Y_ORIGIN"/>
+		<item value="1524" key="DIALOG_X_ORIGIN"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="1258" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="seg" key="selection"/>
+		<item value="BOOST" key="selection"/>
 		<list key="findhistory">
-			<item value="seg"/>
-			<item value="7"/>
-			<item value="7seg"/>
-			<item value="sys"/>
-			<item value="rgb"/>
-			<item value="led"/>
-			<item value="tick"/>
-			<item value="sys_tick"/>
+			<item value="boost"/>
+			<item value="state"/>
+			<item value="joystick"/>
+			<item value="joystate"/>
+			<item value="gpio"/>
+			<item value="31"/>
+			<item value="sw"/>
+			<item value="sw4"/>
 		</list>
 		<list key="replacehistory">
 		</list>
