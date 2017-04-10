@@ -308,7 +308,7 @@ int main(void) {
 
 			/* <---- readAndProcessSensorValues ------ */
 			// Read sensors (light, temp, acc)
-			int lightval = light_read() + 48;
+			int lightval = light_read();
 			int tempval = temp_read();
 			acc_read(&x, &y, &z);
 			// Adjust x y z readings to easier to read format based on earlier calibrations
