@@ -1,8 +1,13 @@
 /*****************************************************************************
- *   A demo example using several of the peripherals on the base board
+ *	Assignment 2
+ *	Lim Jun Hao	(A0147944U)
+ *	Luo Ruikang	(A0164638W)
  *
- *   Copyright(C) 2011, EE2024
- *   All rights reserved.
+ *	NOTE: Code is not refactorized for readability
+ *
+ *	Code based off EE2024 demo code
+ *	Copyright(C) 2011, EE2024
+ *	All rights reserved.
  *
  ******************************************************************************/
 
@@ -59,7 +64,7 @@ void SysTick_Handler(void) {
 	}
 }
 
-int getTicks(void) {
+uint32_t getTicks(void) {
 	return msTicks;
 }
 
@@ -211,18 +216,21 @@ int main(void) {
 	 * 8bit signed -> -128~+127
 	 * "A good example is long. On one machine, it might be 32 bits (the minimum required by C). On another, it's 64 bits."
 	 */
-	int8_t monitorState = 0;
-	int8_t currentTick = 48;
-	int8_t print_at_f_counter1 = 0;
-	int8_t print_at_f_counter2 = 0;
-	int8_t print_at_f_counter3 = 0;
-	int8_t movementDetected = 0;
-	int8_t fireDetected = 0;
-	int8_t movingInDarkDetected = 0;
+	uint32_t debounceTime = 0;
+	uint8_t monitorState = 0;
+	uint32_t currentTick = 48;
+	uint8_t uartCounterThirdDigit = 0;
+	uint8_t uartCounterSecondDigit = 0;
+	uint8_t uartCounterFirstDigit = 0;
+	uint8_t movementDetected = 0;
+	uint8_t fireDetected = 0;
+	uint8_t movingInDarkDetected = 0;
 	uint32_t previousTime;
-	int32_t xoff = 0;
-	int32_t yoff = 0;
-	int32_t zoff = 0;
+
+	// acc can measure up to ±70 (±64 typ)
+	int8_t xoff = 0;
+	int8_t yoff = 0;
+	int8_t zoff = 0;
 	int8_t x = 0;
 	int8_t y = 0;
 	int8_t z = 0;
@@ -233,6 +241,7 @@ int main(void) {
 	initialize();
 
 	/* ---- Calibrate ------> */
+
 	acc_read(&x, &y, &z);
 	xoff = 0 - x;
 	yoff = 0 - y;
@@ -255,87 +264,94 @@ int main(void) {
 
 	while (1) {
 		/* <---- State Manager ------ */
-		if (((GPIO_ReadValue(1) >> 31) & 0x01) == 0 && monitorState == 0) {
-			msg = "Entering MONITOR Mode.\r\n";
-			UART_Send(LPC_UART3, (uint8_t *) msg, strlen(msg), BLOCKING);
-			monitorState = 1;
-			rgb_setLeds(4);
-			oled_clearScreen(OLED_COLOR_BLACK);
-			oled_putString(10, 10, "MONITOR", OLED_COLOR_WHITE,
-					OLED_COLOR_BLACK);
-		} else if (((GPIO_ReadValue(1) >> 31) & 0x01) == 0
-				&& monitorState == 1) {
-			msg = "Entering Stable State.\r\n";
-			UART_Send(LPC_UART3, (uint8_t *) msg, strlen(msg), BLOCKING);
-			monitorState = 0;
-			rgb_setLeds(0);
-			led7seg_setChar(32, FALSE);
-			oled_clearScreen(OLED_COLOR_BLACK);
-			fireDetected = 0;
-			movingInDarkDetected = 0;
-			alertStatus = 0;
-			refreshRate = 1000;
-			systick_delay(1000);
+		if (((GPIO_ReadValue(1) >> 31) & 0x01) == 0) {
+			if ((msTicks - debounceTime) > 500) {
+				if (monitorState == 0) {
+					msg = "Entering MONITOR Mode.\r\n";
+					UART_Send(LPC_UART3, (uint8_t *) msg, strlen(msg),
+							BLOCKING);
+					monitorState = 1;
+					rgb_setLeds(4); // Turn on Green LED on rgbLED to enable oled screen
+					oled_clearScreen(OLED_COLOR_BLACK);
+					oled_putString(10, 10, "MONITOR", OLED_COLOR_WHITE,
+							OLED_COLOR_BLACK);
+				} else if (monitorState == 1) {
+					msg = "Entering Stable State.\r\n";
+					UART_Send(LPC_UART3, (uint8_t *) msg, strlen(msg),
+							BLOCKING);
+					monitorState = 0; // Stable state
+					rgb_setLeds(0); // Turn off rgbLeds
+					led7seg_setChar(32, FALSE); // Clear led7seg display
+					oled_clearScreen(OLED_COLOR_BLACK); // Clear oled screen
+					fireDetected = 0; // Reset fireDetected flag
+					movingInDarkDetected = 0; // Reset movingInDarkDetected flag
+					alertStatus = 0; // Reset alert flag
+					refreshRate = 1000; // Reset refresh rate
+				}
+			}
+			debounceTime = msTicks;
 		}
 
 		/* <---- Monitor Mode ------ */
 		if (monitorState == 1) {
-			// Run once every second
-			while ((msTicks - previousTime) < refreshRate)
-				;
+
+			/* <---- refreshRateHandler ------ */
+			// Run once every second by default
+			while ((msTicks - previousTime) < refreshRate) {
+				; // Wait
+			}
 			previousTime = msTicks;	// read current tick counter
 
-			/* <---- Onboard timer shown on led7seg ------ */
+			/* <---- updateLed7SegTick(a) ------ */
 			led7seg_setChar(currentTick, FALSE);
-			currentTick++;
-			if (currentTick == 58) {
-				currentTick = 65;
-			} else if (currentTick == 71) {
-				currentTick = 48;
-			}
 
-			/* <---- Update sensors values ------ */
+			/* <---- readAndProcessSensorValues ------ */
 			// Read sensors (light, temp, acc)
 			int lightval = light_read() + 48;
 			int tempval = temp_read();
 			acc_read(&x, &y, &z);
-			// Adjust x y z readings
+			// Adjust x y z readings to easier to read format based on earlier calibrations
 			x = x + xoff;
 			y = y + yoff;
 			z = z + zoff;
-			// Check for movement based on previous acc values
-			if (((abs(x - xold)) > 10) || ((abs(y - yold)) > 10)
-					|| ((abs(z - zold)) > 10)) {
-				movementDetected = 1;
-			} else {
-				movementDetected = 0;
-			}
-			xold = x;
-			yold = y;
-			zold = z;
-
-			/* <---- LIGHT_LOW_WARNING & TEMP_HIGH_WARNING ------ */
-			// Check for user moving in dark places
-			if (movingInDarkDetected == 0 && movementDetected == 1
-					&& lightval < 50) {
-				movingInDarkDetected = 1;
-				if (fireDetected == 1) {
-					alertStatus = 3;
+			if (movingInDarkDetected == 0) { // Reduce computation if movingInDarkDetected is already true
+				// Check for movement based on previous acc values
+				if (((abs(x - xold)) > 10) || ((abs(y - yold)) > 10)
+						|| ((abs(z - zold)) > 10)) {
+					movementDetected = 1;
 				} else {
-					alertStatus = 1;
+					movementDetected = 0;
 				}
-			}
-			// Check if temp exceeds permissible limits
-			if (fireDetected == 0 && tempval > 450) {
-				fireDetected = 1;
-				if (movingInDarkDetected == 1) {
-					alertStatus = 3;
-				} else {
-					alertStatus = 2;
-				}
+				// Update 'previous' acc values to current values
+				xold = x;
+				yold = y;
+				zold = z;
 			}
 
-			/* <---- Update values on OLED ------ */
+			/* <---- checkProcessedSensorValuesForDanger ------ */
+			if (alertStatus != 3) { // Reduce computation if unnecessary
+				// Check for user moving in dark places
+				if (movingInDarkDetected == 0 && movementDetected == 1
+						&& lightval < 50) {
+					movingInDarkDetected = 1;
+					if (fireDetected == 1) {
+						alertStatus = 3;
+					} else {
+						alertStatus = 1;
+					}
+				}
+				// Check if temp exceeds permissible limits
+				if (fireDetected == 0 && tempval > 450) {
+					fireDetected = 1;
+					if (movingInDarkDetected == 1) {
+						alertStatus = 3;
+					} else {
+						alertStatus = 2;
+					}
+				}
+			}
+
+			/* <---- printProcessedSensorValuesOnOled ------ */
 			if (currentTick == 53 || currentTick == 65 || currentTick == 70) {
 				oled_clearScreen(OLED_COLOR_BLACK);
 				char strLight[25], strTemp[25], strAcc[25], strRefresh[25];
@@ -361,7 +377,7 @@ int main(void) {
 						OLED_COLOR_BLACK);
 			}
 
-			/* <---- Send message via UART ------ */
+			/* <---- sendUpdateToUart ------ */
 			if (currentTick == 70) {
 				// Warning messages sent first
 				if (fireDetected == 1) {
@@ -377,20 +393,28 @@ int main(void) {
 
 				char strToSend[70];
 				sprintf(strToSend, "%d%d%d_-_T%d_L%d_AX%d_AY%d_AZ%d\r\n",
-						print_at_f_counter3, print_at_f_counter2,
-						print_at_f_counter1, tempval, lightval, x, y, z);
+						uartCounterFirstDigit, uartCounterSecondDigit,
+						uartCounterThirdDigit, tempval, lightval, x, y, z);
 				UART_Send(LPC_UART3, (uint8_t *) strToSend, strlen(strToSend),
 						BLOCKING);
 
-				print_at_f_counter1++;
-				if (print_at_f_counter1 > 9) {
-					print_at_f_counter1 = 0;
-					print_at_f_counter2++;
-					if (print_at_f_counter2 > 9) {
-						print_at_f_counter2 = 0;
-						print_at_f_counter3++;
+				uartCounterThirdDigit++;
+				if (uartCounterThirdDigit > 9) {
+					uartCounterThirdDigit = 0;
+					uartCounterSecondDigit++;
+					if (uartCounterSecondDigit > 9) {
+						uartCounterSecondDigit = 0;
+						uartCounterFirstDigit++;
 					}
 				}
+			}
+
+			/* <---- updateLed7SegTick(b) ------ */
+			currentTick++;
+			if (currentTick == 58) {
+				currentTick = 65;
+			} else if (currentTick == 71) {
+				currentTick = 48;
 			}
 
 			Timer0_Wait(1);
