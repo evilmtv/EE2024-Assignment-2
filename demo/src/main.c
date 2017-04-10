@@ -36,7 +36,7 @@ static int8_t alertStatus = 0;
 static char* msg = NULL;
 volatile uint32_t msTicks; // counter for 1ms SysTicks
 
-//  SysTick_Handler - increment SysTick counter
+//  Increment SysTick counter and blink rgbLEDs depending on alertStatus
 void SysTick_Handler(void) {
 	msTicks++;
 
@@ -71,8 +71,7 @@ uint32_t getTicks(void) {
 	return msTicks;
 }
 
-// ****************
-// systick_delay - creates a delay of the appropriate number of Systicks (happens every 1 ms)
+// Creates a delay of the appropriate number of Systicks (happens every 1 ms)
 __INLINE void systick_delay(uint32_t delayTicks) {
 	uint32_t currentTicks;
 
