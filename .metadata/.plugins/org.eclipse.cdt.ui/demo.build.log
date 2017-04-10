@@ -1,41 +1,7 @@
-22:06:00 **** Build of configuration Debug for project demo ****
-make all 
-Building file: ../src/cr_startup_lpc17.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/cr_startup_lpc17.d" -MT"src/cr_startup_lpc17.d" -o "src/cr_startup_lpc17.o" "../src/cr_startup_lpc17.c"
-Finished building: ../src/cr_startup_lpc17.c
- 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'main':
-../src/main.c:277:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
-D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:364:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
-D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:368:8: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
-D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:371:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
-D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:373:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
-D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:375:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
-D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-../src/main.c:377:7: warning: pointer targets in passing argument 3 of 'oled_putString' differ in signedness [-Wpointer-sign]
-D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc/oled.h:29:6: note: expected 'uint8_t *' but argument is of type 'char *'
-Finished building: ../src/main.c
- 
-Building target: demo.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo.map -mcpu=cortex-m3 -mthumb -T "demo_Debug.ld" -o "demo.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
-Finished building target: demo.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size demo.axf; # arm-none-eabi-objdump -h -S demo.axf >demo.lss
-   text	   data	    bss	    dec	    hex	filename
-  39540	   2260	    904	  42704	   a6d0	demo.axf
+22:13:40 **** Clean-only build of configuration Debug for project demo ****
+make clean 
+rm -rf  ./src/cr_startup_lpc17.o ./src/main.o  ./src/cr_startup_lpc17.d ./src/main.d  demo.axf
  
 
-22:06:01 Build Finished (took 678ms)
+22:13:40 Build Finished (took 80ms)
 

@@ -1,26 +1,7 @@
-22:06:02 **** Build of configuration Debug for project demo_GPIO ****
-make all 
-Building file: ../src/cr_startup_lpc17.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/cr_startup_lpc17.d" -MT"src/cr_startup_lpc17.d" -o "src/cr_startup_lpc17.o" "../src/cr_startup_lpc17.c"
-Finished building: ../src/cr_startup_lpc17.c
- 
-Building file: ../src/main.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -DDEBUG -D__USE_CMSIS=CMSISv1p30_LPC17xx -D__CODE_RED -D__NEWLIB__ -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\inc" -I"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
-Finished building: ../src/main.c
- 
-Building target: demo_GPIO.axf
-Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_CMSISv1p30_LPC17xx\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_EaBaseBoard\Debug" -L"D:\NUS\Year 2 AY2016-2017\EE2024\Lib_MCU\Debug" -Xlinker --gc-sections -Xlinker -Map=demo_GPIO.map -mcpu=cortex-m3 -mthumb -T "demo_GPIO_Debug.ld" -o "demo_GPIO.axf"  ./src/cr_startup_lpc17.o ./src/main.o   -lCMSISv1p30_LPC17xx -lLib_EaBaseBoard -lLib_MCU
-Finished building target: demo_GPIO.axf
- 
-make --no-print-directory post-build
-Performing post-build steps
-arm-none-eabi-size demo_GPIO.axf; # arm-none-eabi-objdump -h -S demo_GPIO.axf >demo_GPIO.lss
-   text	   data	    bss	    dec	    hex	filename
-   6580	     64	      0	   6644	   19f4	demo_GPIO.axf
+22:13:43 **** Clean-only build of configuration Debug for project demo_GPIO ****
+make clean 
+rm -rf  ./src/cr_startup_lpc17.o ./src/main.o  ./src/cr_startup_lpc17.d ./src/main.d  demo_GPIO.axf
  
 
-22:06:03 Build Finished (took 479ms)
+22:13:43 Build Finished (took 78ms)
 
